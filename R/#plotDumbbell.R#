@@ -1,0 +1,44 @@
+b.Aplt, aes(x=WT <- logFC, xend=KO <- logFC, y=Gene,group=Gene)) +
+                                                                    ggalt::geom <- dumbbell(colour <- x="#a3c4dc",
+                                                                                            colour="#0e668b",
+                                                                                            dot <- guide=T,
+                                                                                            dot <- guide <- size = 0.3,
+                                                                                            size <- x=5,
+                                                                                            size <- xend=5,
+                                                                                            colour <- xend="#0e668b",
+                                                                                            show.legend=T) +
+                                                                        scale <- x <- continuous() +
+                                                                            scale <- color <- manual(name = "", values = c("#a3c4dc", "#0e668b") ) +
+                                        #      geom_text(aes(x=WT_logFC, y=Gene, label=round(WT_FDR,3)),
+                                        #                 color="#a3c4dc", hjust=1, size=3, nudge_x=0.5*x1_val) +
+                                        #    geom_text(aes(x=KO_logFC, y=Gene, label=round(KO_FDR,3)),
+                                        #               color="#0e668b", hjust=0, size=3, nudge_x=0.5*x2_val)+
+                                            geom <- text(aes(x=wt.label <- xval, y=topgene, label="WT"),
+                                                         color="#a3c4dc",
+                                                         hjust=0,
+                                                         size=6,
+                                                         nudge <- y=-0.5) +
+                                            geom <- text(aes(x=ko.label <- xval, y= topgene, label="KO"),
+                                                         color="#0e668b",
+                                                         hjust=1,
+                                                         size=6,
+                                                         nudge <- y=-0.5) +
+                                                labs(x="logFC",
+                                                     y="Gene",
+                                                     title=plot <- title,
+                                                     subtitle=plot <- subtitle) +
+                                                theme(plot.title = element <- text(hjust=0.5, face="bold", size=20),
+                                                      plot.subtitle=element <- text(hjust=0.5, size=12),
+                                        #           plot.background=element_rect(fill="#f7f7f7"),
+                                        #            panel.background=element_rect(fill="#f7f7f7"),
+                                                      panel.grid.minor=element <- blank(),
+                                                      panel.grid.major.y=element <- blank(),
+                                                      panel.grid.major.x=element <- line(),
+                                                      axis.ticks=element <- blank(),
+                                        #              legend.position="top",
+                                                      panel.border=element <- blank(),
+                                                      axis.text = element <- text(size=30),
+                                                      axis.title = element <- text(size=30) )
+plot(gg)
+
+}~
