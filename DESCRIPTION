@@ -1,0 +1,28 @@
+Package: pledger
+Title: Plotting methods for differential gene expression data in R
+Version: 0.0.0.9
+Authors@R: person("Mukund", "Varma", email = "me@mukundvarma.com", role = c("aut", "cre"))
+Description: This package provides various plotting utilities for pathway enrichment
+    of gene expression data. It works with the output from the functions
+    kegga() and goana() provided by edgeR, limma and others. Existing tools do
+    a good job of visualizing the significance and/or the GO terms, but there are
+    no tools which allow you to visualize the genes enriched within a pathway.
+    This package aims to fill that gap with multiple user-friendly methods of
+    visualizing the genes enriched within a pathway
+Depends: R (>= 3.4.1)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr
+    edgeR
+    ggplot
+    pheatmap
+    wordcloud
+    
+Suggests:
+    org.Mm.eg.db
+    org.Hs.eg.db,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
